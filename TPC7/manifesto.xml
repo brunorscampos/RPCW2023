@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <titulo>TPC7</titulo>
+        <subtitulo>Este é opcional</subtitulo>
+        <data>AAAA-MM-DD</data>
+        <autor>
+            <nome>Bruno Ricardo Silva Campos</nome>
+            <id>PG50275</id>
+            <gitlink>https://github.com/brunorscampos/RPCW2023</gitlink>
+        </autor>
+        <uc>MEI</uc>
+    </meta>
+    <resumo>
+        <p>Para 1...<b>isto fica a bold</b></p>
+        <p>Para 2...<i>isto fica a italico</i></p>
+        <p>Para 3 com <xref url="URL para o recurso">uma referencia externa</xref>...</p>
+    </resumo>
+    <resultados><!-- lista -->
+        <resultado path="link para o ficheiro(link relativo)">Descrição do que é</resultado>
+    </resultados>
+</manifesto>
