@@ -1,0 +1,28 @@
+[
+    {
+       "id":"h1",
+       "species":"Hippopotamus amphibius",
+       "common_name":"Common hippopotamus",
+       "habitat":"Rivers, lakes, and swamps in sub-Saharan Africa",
+       "conservation_status":"Vulnerable",
+       "population_trend":"Decreasing",
+       "average_weight_kg":1500,
+       "average_length_m":3.5,
+       "diet":"Herbivorous, mainly grasses",
+       "description":"<br>The hippopotamus or hippo (/ˌhɪpəˈpɒtəməs/ HIP-ə-POT-ə-məs; pl: hippos, hippopotamuses or hippopotami; Hippopotamus amphibius), further qualified as the common hippopotamus, Nile hippopotamus, or river hippopotamus, is a large semiaquatic mammal native to sub-Saharan Africa. It is one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus (Choeropsis liberiensis or Hexaprotodon liberiensis). Its name comes from the ancient Greek for \"river horse\" (ἱπποπόταμος).<br><br>After elephants and rhinos, the hippopotamus is the next largest land mammal. It is also the largest extant land artiodactyl. Despite their physical resemblance to pigs and other terrestrial even-toed ungulates, the closest living relatives of the hippopotamids are cetaceans (whales, dolphins, porpoises, etc.), from which they diverged about 55 million years ago. Hippos are recognisable for their barrel-shaped torsos, wide-opening mouths with large canine tusks, nearly hairless bodies, pillar-like legs, and large size: adults average 1,500 kg (3,300 lb) for bulls (males) and 1,300 kg (2,900 lb) for cows (females). Despite its stocky shape and short legs, it is capable of running 30 km/h (19 mph) over short distances.<br><br>Hippos inhabit rivers, lakes, and mangrove swamps. Territorial bulls each preside over a stretch of water and a group of five to thirty cows and calves. Mating and birth both occur in the water. During the day, hippos remain cool by staying in water or mud, emerging at dusk to graze on grasses. While hippos rest near each other in the water, grazing is a solitary activity and hippos typically do not display territorial behaviour on land. Hippos are among the most dangerous animals in the world due to their aggressive and unpredictable nature. They are threatened by habitat loss and poaching for their meat and ivory (canine teeth).",
+       "img":"img_hipo/Common hippopotamus.jpg"
+    },
+    {
+      "id":"h2",
+       "species":"Choeropsis liberiensis",
+       "common_name":"Pygmy hippopotamus",
+       "habitat":"Rainforests and swamps in West Africa",
+       "conservation_status":"Endangered",
+       "population_trend":"Decreasing",
+       "average_weight_kg":250,
+       "average_length_m":1.5,
+       "diet":"Herbivorous, mainly leaves and fruits",
+       "description":"<br>The pygmy hippopotamus or pygmy hippo (Choeropsis liberiensis) is a small hippopotamid which is native to the forests and swamps of West Africa, primarily in Liberia, with small populations in Sierra Leone, Guinea, and Ivory Coast. It has been extirpated from Nigeria.<br><br>The pygmy hippo is reclusive and nocturnal. It is one of only two extant species in the family Hippopotamidae, the other being its much larger relative, the common hippopotamus (Hippopotamus amphibius) or Nile hippopotamus. The pygmy hippopotamus displays many terrestrial adaptations, but like the hippo, it is semiaquatic and relies on water to keep its skin moist and its body temperature cool. Behaviors such as mating and giving birth may occur in water or on land. The pygmy hippo is herbivorous, feeding on ferns, broad-leaved plants, grasses, and fruits it finds in the forests.<br><br>A rare nocturnal forest creature, the pygmy hippopotamus is a difficult animal to study in the wild. Pygmy hippos were unknown outside West Africa until the 19th century. Introduced to zoos in the early 20th century, they breed well in captivity and the vast majority of research is derived from zoo specimens. The survival of the species in captivity is more assured than in the wild; in a 2015 assessment, the International Union for Conservation of Nature estimated that fewer than 2,500 pygmy hippos remain in the wild.<br><br>Pygmy hippos are primarily threatened by loss of habitat, as forests are logged and converted to farm land, and are also vulnerable to poaching, hunting for bushmeat, natural predators, and war. Pygmy hippos are among the species illegally hunted for food in Liberia.",
+       "img":"img_hipo/Pygmy hippopotamus.jpg"
+    }
+ ]

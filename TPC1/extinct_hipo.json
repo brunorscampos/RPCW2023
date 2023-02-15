@@ -1,0 +1,62 @@
+[
+    {
+       "id":"e1",
+       "species":"Hippopotamus antiquus",
+       "habitat":"Europe and Asia",
+       "extinction_date":"Late Pleistocene",
+       "average_weight_kg":2000,
+       "average_length_m":4.5,
+       "description":"<br>In Italy, the first appearance of the taxon is during the late Early Pleistocene, around 1.2 Ma, remains from Coste San Giacomo, suggested to date to around 2 Ma, have an uncertain stratigraphic context. H. antiquus first became widespread north of the Alps around 1.1 to 1 million years ago. The youngest confirmed remains of the taxon date to MIS 15, (621–563,000 years ago), but there are possibly later records dating to MIS 11 (424,000 to 374,000 years ago). Later records of Hippopotamus in Europe beginning in MIS 13 (~524,000-474,000 years ago), are believed to belong to the modern hippopotamus (Hippopotamus amphibius).<br><br>H. antiquus ranged from the Iberian Peninsula to the British Isles to the Rhine River to Greece. Their distribution was strongly controlled by temperature, with the species only extending to the northern parts of Europe during warmer interglacial intervals.<br><br>At an average weight of 3200 kg (7040 lb), Hippopotamus antiquus was larger than the modern common hippopotamus (Hippopotamus amphibius), but smaller than Hippopotamus gorgops. Hippopotamus antiquus has been suggested to have been more aquatically adapted than Hippopotamus amphibius, with the skull having more elevated eyesockets and the feet having shorter metapodial bones than H. amphibius. An analysis of nitrogen isotopes suggests that H. antiquus preferred aquatic plants, in contrast to modern H. amphibius, which prefers terrestrial grasses.<br><br>The Cretan dwarf hippopotamus (H. creutzburgi) is believed to have evolved from H. antiquus through the process of insular dwarfism on the island of Crete.",
+       "img":"img_hipo/Hippopotamus antiquus.jpg"
+    },
+    {
+       "id":"e2",
+       "species":"Hippopotamus creutzburgi",
+       "habitat":"Africa",
+       "extinction_date":"Early Holocene",
+       "average_weight_kg":1500,
+       "average_length_m":3.5,
+       "description":"<br>Hippopotamus creutzburgi, the Cretan dwarf hippopotamus, is an extinct species of hippopotamus from the island of Crete. Hippopopotamus colonized Crete probably 800,000 years ago and lived there during the Middle Pleistocene. Bones of H. creutzburgi were found by Dorothea Bate on the Katharo plateau, in eastern Crete, in the 1900s. A similar species, the Cyprus dwarf hippopotamus (Phanourios minor) lived on the island of Cyprus until the Holocene. It was at least 20% smaller than either subspecies of Cretan hippo.",
+       "img":"img_hipo/Hippopotamus creutzburgi.jpg"
+    },
+    {
+       "id":"e3",
+       "species":"Hippopotamus gorgops",
+       "habitat":"Africa",
+       "extinction_date":"Late Miocene",
+       "average_weight_kg":1500,
+       "average_length_m":3.5,
+       "description":"<br>Hippopotamus gorgops is an extinct species of hippopotamus. It first appeared in Africa during the late Pliocene, and eventually migrated into Europe (where its fossils were first discovered) during the early Pleistocene. It became extinct during the Middle Pleistocene. Fossil records found at Ubeidiya, Israel suggested that they migrated out of Africa around 1.6 million years ago. Some have speculated that H. gorgops and H. behemoth are actually the same species given their similar sizes and where they have been found.<br><br>With an estimated length of 4.3 metres (14 ft), a shoulder height of 2.1 metres (6.9 ft), and a weight of 3,900-4,500 kg (8,600-9,900 lb), H. gorgops was larger than its living relative, H. amphibius. Another feature setting it apart from H. amphibius was the placement of its eyes. Modern hippos have eyes placed high on the skull, but H. gorgops had eyestalk-like orbits extruding above its skull, making it even easier for the creature to see its surroundings while (almost) fully under water. This species was described by German scientist Wilhelm Otto Dietrich in 1928.",
+       "img":"img_hipo/Hippopotamus gorgops.jpg"
+    },
+    {
+       "id":"e4",
+       "species":"Hippopotamus lemerlei",
+       "habitat":"Madagascar",
+       "extinction_date":"Late Holocene",
+       "average_weight_kg":275,
+       "average_length_m":2.5,
+       "description":"<br>Lemerle's dwarf hippopotamus (Hippopotamus lemerlei) is an extinct species of Malagasy hippopotamus.<br><br>Malagasy hippopotamuses were first discovered in the mid-19th century by Alfred Grandidier, who unearthed nearly 50 individual hippos from a dried-up swamp at Ambolisaka near Lake Ihotry, a few miles from the Mozambique Channel. In 1989, Scandinavian palaeontologist Solweig Stuenes described H. madagascariensis and H. lemerlei from these bones.<br><br>It may have descended from full-sized hippos who shrunk due to insular dwarfism, similar to many Mediterranean island hippos, such as with the Cretan dwarf hippopotamus or the Cyprus dwarf hippopotamus.<br><br>Hippopotamus lemerlei bones have been mostly discovered in the rivers and lakes (riparian environments) of western Madagascar, suggesting a habitat very similar to that of the modern hippo of modern Africa. H. lemerlei also shared the high-placed eyes that make it easier to see while submerged.<br><br>Although a clear relative to the common hippopotamus, H. lemerlei was much smaller, roughly the size of the modern pygmy hippopotamus (Choeropsis liberiensis). The largest specimens were 2.0 m (6.5 ft) long and 2.5 ft (0.76 m) tall.<br><br>Bones of H. lemerlei have been dated to about 1,000 years ago (980±200 radiocarbon years before present.",
+       "img":"img_hipo/Hippopotamus lemerlei.jpg"
+    },
+    {
+       "id":"e5",
+       "species":"Hippopotamus laloumena",
+       "habitat":"Madagascar",
+       "extinction_date":"Late Pleistocene",
+       "average_weight_kg":275,
+       "average_length_m":2.5,
+       "description":"<br>Hippopotamus laloumena is an extinct species of hippopotamus from Pleistocene and Holocene Madagascar, making it the oldest of Malagasy hippopotamus. H. laloumena was much larger than other Malagasy hippopotamus, but was still somewhat smaller than the common hippopotamus (H. amphibius). However, little is known about the species because it was identified with only a lower jaw and limb bones. It was described in 1990 by French palaeontologists M. Faure and Guerin, the fossils recovered from a site near Mananjary on the east coast of Madagascar. The species name derives from Malagasy laloumena \"hippopotamus\".<br><br>Radiocarbon dating of H. laloumena remains returned dates both before definitive human occupation of Madagascar (2364-2212 BP), and after European contact (1670-1950 and 1639-1945 AD). However, the latter were taken from a skull of dubious provenance and importation from mainland Africa cannot be excluded. Nevertheless, ethnographic data collected in Belo sur Mer include putative eyewitness accounts of a hippo-like animal as recently as 1976.<br><br>While clearly different from Madagascar's other two recent hippopotamuses (H. lemerlei and H. madagascariensis), the relationship between H. laloumena and the common hippopotamus is not fully resolved. It is possible H. laloumena is merely the result of hippos sporadically crossing from East Africa to Madagascar during the Quaternary; if true, this would make H. laloumena a junior synonym of H. amphibius.<br><br>Fossils of H. laloumena have been excavated from west and east coasts, and overlap with ranges of other Malagasy hippopotamuses.",
+       "img":"img_hipo/Hippopotamus laloumena.jpg"
+    },
+    {
+       "id":"e6",
+       "species":"Hippopotamus madagascariensis",
+       "habitat":"Madagascar",
+       "extinction_date":"Late Holocene",
+       "average_weight_kg":500,
+       "average_length_m":2.8,
+       "description":"<br>Hippopotamus madagascariensis, the Madagascar or Madagascan dwarf hippopotamus, is an extinct species of hippopotamus, endemic to the island of Madagascar. Known only from bones, it is believed to have gone extinct sometime after 1500. It was one of three hippopotamus species, the Malagasy hippopotamuses, which were native to Madagascar and are all extinct.<br><br>Malagasy hippopotamuses were first discovered in the mid-19th century by Alfred Grandidier, who unearthed nearly 50 individual hippos from a dried-up swamp at Ambolisaka near Lake Ihotry, a few miles from the Mozambique Channel. In 1989, Scandinavian palaeontologist Solweig Stuenes described H. madagascariensis and H. lemerlei from these bones.<br><br>Like the modern pygmy hippopotamus (Choeropsis liberiensis), the Malagasy pygmy hippo had eyes on the side of its head rather than high orbits and teeth of the common hippopotamus. The Malagasy pygmy hippo was similarly less aquatic, with many of its fossils found in the forested highlands of Madagascar. These similarities may be due to convergent evolution.<br><br>Fossils of both the Malagasy pygmy hippopotamus and H. lemerlei show a cursorial adaptation, distinct from the hippos on the African continent, and they would have been much better runners.<br><br>Although there have been no remains dating to within the last thousand years, the hippopotamus has been surprisingly common in Malagasy oral legends. In different regions of Madagascar, stories were recorded of the mangarsahoc, the tsy-aomby-aomby, the omby-rano, and the laloumena, all animals that resembled hippopotamuses. The strength of these oral traditions led the International Union for Conservation of Nature (IUCN) to classify H. madagascarensis as recently extinct (going extinct some time after the year 1500).<br><br>At least seven hippopotamus bones show unequivocal signs of butchery, suggesting that they survived until humans arrived on Madagascar. Humans and hippos may have coexisted for about 2,000 years. It is possible overhunting by humans led to their extinction.",
+       "img":"img_hipo/Hippopotamus madagascariensis.jpg"
+    }
+ ]
