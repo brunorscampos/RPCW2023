@@ -1,5 +1,6 @@
 body {
     background-color: powderblue;
+    margin: 0;
 }
 
 h1 {
@@ -14,4 +15,20 @@ p {
     float: right;   
     margin: 30px 12px 3px 4px;   
     border: 2px solid blue;
-}   
+}
+
+.index {
+    width: 22%;
+    height: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    vertical-align: top;
+}
+
+.index2 {
+    position: fixed;
+}
+
+.data {
+    padding-right: 1%;
+}

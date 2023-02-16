@@ -15,11 +15,11 @@ pagina_web = """
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>HyperPotamus</h1>
         <table>
             <tr>
-                <td width="20%" valign="top">
-                    <a name="indice"/>
+                <td class="index">
+                <div class="index2">
+                    <h1>HyperPotamus</h1>
                     <h2>Index</h3>
                     <h4>Hippopotamus</h4>
                     <!-- Lista com indice -->
@@ -49,8 +49,9 @@ for c in extinct_hipo:
     
 pagina_web += """
 </ul>
+</div>
                 </td>
-                <td>
+                <td class="data">
                 <h2>Hippopotamus</h2>
 """
 
@@ -69,7 +70,7 @@ for c in hipo:
                     <p><b>Average Length(m): </b> {c['average_length_m']} </p>
                     <p><b>Diet: </b> {c['diet']} </p>
                     <p><b>Description: </b> {c['description']} </p>
-                    <address>[<a href="#indice">Voltar ao Indice</a>]</address>
+                    <br>
 """
 
 pagina_web += """
@@ -88,7 +89,7 @@ for c in extinct_hipo:
                     <p><b>Average Weight(Kg): </b> {c['average_weight_kg']} </p>
                     <p><b>Average Length(m): </b> {c['average_length_m']} </p>
                     <p><b>Description: </b> {c['description']} </p>
-                    <address>[<a href="#indice">Voltar ao Indice</a>]</address>
+                    <br>
 """
 
 pagina_web += """
@@ -101,6 +102,3 @@ pagina_web += """
 
 with open('hipo.html','w') as f:
     f.write(pagina_web)
-
-
-#<div className="serachApostadores"/>
