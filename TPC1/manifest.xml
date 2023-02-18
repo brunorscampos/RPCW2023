@@ -3,7 +3,7 @@
     <meta>
         <titulo>TPC1</titulo>
         <subtitulo>Site sobre Hipopótamos</subtitulo>
-        <data>AAAA-MM-DD</data>
+        <data>2023-02-18</data>
         <autor>
             <nome>Bruno Ricardo Silva Campos</nome>
             <id>PG50275</id>
@@ -12,11 +12,16 @@
         <uc>MEI</uc>
     </meta>
     <resumo>
-        <p>Para 1...<b>isto fica a bold</b></p>
-        <p>Para 2...<i>isto fica a italico</i></p>
-        <p>Para 3 com <xref url="URL para o recurso">uma referencia externa</xref>...</p>
+        <p>Site HTML sobre, o tema escolhido, <b>Hipopótamos</b>.</p>
+        <p>Pagina HTML que descreve diferentes especies de Hipopótamos atuais ou extintos, usando os conhecimentos obtidos durante as aulas.</p>
+        <p>Imagens e descrições obtidas de <i>Google Images</i> ou <i>Wikipedia</i>(e.g. <xref url="https://en.wikipedia.org/wiki/Hippopotamus">Hippopotamus</xref>).</p>
     </resumo>
     <resultados><!-- lista -->
-        <resultado path="link para o ficheiro(link relativo)">Descrição do que é</resultado>
+        <resultado path="hipo.py">Script Python que gera a pagina HTML</resultado>
+        <resultado path="hipo.html">Página HTML gerada por "hipo.py"</resultado>
+        <resultado path="hipo.json">Lista JSON com informações sobre as especies de hipopótamos existentes atualmente</resultado>
+        <resultado path="extinct_hipo.json">Lista JSON com informações sobre algumas especies de hipopótamos extintas</resultado>
+        <resultado path="img_hipo">Pasta com imagens usadas pela página HTML</resultado>
+        <resultado path="styles.css">CSS que desceve como os diferentes elementos HTML devem ser formatados</resultado>
     </resultados>
 </manifesto>
