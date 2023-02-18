@@ -19,48 +19,48 @@ pagina_web = """
         <table>
             <tr>
                 <td class="index">
-                <div class="index2">
-                    <h1>HyperPotamus</h1>
-                    <h2>Index</h3>
-                    <h4>Hippopotamus</h4>
-                    <!-- Lista com indice -->
-                    <ul>
+                    <div class="index2">
+                        <h1>HyperPotamus</h1>
+                        <h2>Index</h3>
+                        <h4>Hippopotamus</h4>
+                        <!-- Lista com indice -->
+                        <ul>
 """
 
 for c in hipo:
     pagina_web += f"""
-        <li>
-            <a href="#{c['id']}">{c['common_name']}</a>
-        </li>
-    """
+                            <li>
+                                <a href="#{c['id']}">{c['common_name']}</a>
+                            </li>
+"""
     
 pagina_web += """
-        </ul>
-                    <h4>Extinct Hippopotamus</h4>
-                    <!-- Lista com indice -->
-                    <ul>
+                        </ul>
+                        <h4>Extinct Hippopotamus</h4>
+                        <!-- Lista com indice -->
+                        <ul>
 """
 
 for c in extinct_hipo:
     pagina_web += f"""
-        <li>
-            <a href="#{c['id']}">{c['species']}</a>
-        </li>
-    """
+                            <li>
+                                <a href="#{c['id']}">{c['species']}</a>
+                            </li>
+"""
     
 pagina_web += """
-</ul>
-</div>
+                        </ul>
+                    </div>
                 </td>
                 <td class="data">
-                <h2>Hippopotamus</h2>
+                    <h2>Hippopotamus</h2>
 """
 
 for c in hipo:
     pagina_web += f"""
                     <a name="{c['id']}"/>
                     <div class="wrapingimage">   
-                    <img src="{c['img']}" alt="{c['species']}">
+                        <img src="{c['img']}" alt="{c['species']}">
                     </div>
                     <h3>{c['common_name']}</h3>
                     <p><b>Species: </b> {c['species']} </p>
@@ -75,13 +75,13 @@ for c in hipo:
 """
 
 pagina_web += """
-                <h2>Extinct Hippopotamus</h2>
+                    <h2>Extinct Hippopotamus</h2>
 """
 
 for c in extinct_hipo:
     pagina_web += f"""
                     <div class="wrapingimage">   
-                    <img src="{c['img']}" alt="{c['species']}">
+                        <img src="{c['img']}" alt="{c['species']}">
                     </div>
                     <a name="{c['id']}"/>
                     <h3>{c['species']}</h3>
