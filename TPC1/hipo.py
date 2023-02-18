@@ -11,6 +11,7 @@ pagina_web = """
 <html>
     <head>
         <title>HyperPotamus</title>
+        <link rel="icon" type="image/x-icon" href="img_hipo/favicon.png">
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -59,7 +60,7 @@ for c in hipo:
     pagina_web += f"""
                     <a name="{c['id']}"/>
                     <div class="wrapingimage">   
-                    <img src="{c['img']}" alt="{c['species']}" height="200">
+                    <img src="{c['img']}" alt="{c['species']}">
                     </div>
                     <h3>{c['common_name']}</h3>
                     <p><b>Species: </b> {c['species']} </p>
@@ -80,7 +81,7 @@ pagina_web += """
 for c in extinct_hipo:
     pagina_web += f"""
                     <div class="wrapingimage">   
-                    <img src="{c['img']}" alt="{c['species']}" height="200">
+                    <img src="{c['img']}" alt="{c['species']}">
                     </div>
                     <a name="{c['id']}"/>
                     <h3>{c['species']}</h3>

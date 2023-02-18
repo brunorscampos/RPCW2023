@@ -11,9 +11,12 @@ p {
     color: red;
 }
 
+img {
+    height: 250px;
+}
+
 .wrapingimage {  
-    float: right;   
-    margin: 30px 12px 3px 4px;   
+    float: right;
     border: 2px solid blue;
 }
 
