@@ -2,8 +2,8 @@
 <manifesto>
     <meta>
         <titulo>TPC2</titulo>
-        <subtitulo>Este é opcional</subtitulo>
-        <data>AAAA-MM-DD</data>
+        <subtitulo>Website de Sitios Arqueologicos</subtitulo>
+        <data>2023-02-22</data>
         <autor>
             <nome>Bruno Ricardo Silva Campos</nome>
             <id>PG50275</id>
@@ -12,11 +12,15 @@
         <uc>MEI</uc>
     </meta>
     <resumo>
-        <p>Para 1...<b>isto fica a bold</b></p>
-        <p>Para 2...<i>isto fica a italico</i></p>
-        <p>Para 3 com <xref url="URL para o recurso">uma referencia externa</xref>...</p>
+        <p>Website sobre sitios arqueologicos criado com recurso a <i>Python</i> e <i>Node.js</i>.</p>
+        <p>Dataset processado, tirando partido de <xref url="https://beautiful-soup-4.readthedocs.io">BeautifulSoup, para extração de cada entrada, e elementos de cada uma.</xref></p>
+        <p>Como algumas entradas do dataset apresentam ausência de certos elementos, estes foram apresentados como <b>"MISSING"</b> na pagina HTML.</p>
     </resumo>
     <resultados><!-- lista -->
-        <resultado path="link para o ficheiro(link relativo)">Descrição do que é</resultado>
+        <resultado path="arq.py">Script que processa o dataset "arq.xml" e cria "index.html" e "arqs"</resultado>
+        <resultado path="arq.js">Script que inicia o Website</resultado>
+        <resultado path="arq.xml">Dataset base fornecido pela equipa docente</resultado>
+        <resultado path="index.html">Pagina root do Website que serve como indice para todos as outras paginas</resultado>
+        <resultado path="arqs">Pasta que contem uma pagina HTML para cada sitio arqueologico</resultado>
     </resultados>
 </manifesto>
