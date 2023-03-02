@@ -45,7 +45,8 @@ http.createServer(function(req,res){
         axios.get('http://localhost:3000/pessoas')
             .then(function(resp){
                 var pessoas = resp.data
-                var desportos = [...new Set(pessoas.map(p => p.desportos).flat())]
+                var allDesportos = pessoas.map(p => p.desportos).flat()
+                var desportos = [...new Set(pessoas.map(p => p.desportos).flat())].sort((d1,d2) => allDesportos.filter(d => d == d1).length < allDesportos.filter(d => d == d2).length ? 1 : -1)
                 res.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'})
                 res.end(mypages.distribSportPage(pessoas,desportos))
             })
@@ -58,8 +59,10 @@ http.createServer(function(req,res){
         axios.get('http://localhost:3000/pessoas')
             .then(function(resp){
                 var pessoas = resp.data
+                var allJobs = pessoas.map(p => p.profissao)
+                var top10jobs = [...new Set(allJobs)].sort((j1,j2) => allJobs.filter(j => j == j1).length < allJobs.filter(j => j == j2).length ? 1 : -1).slice(0, 10)
                 res.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'})
-                res.end(mypages.top10jobsPage(pessoas))
+                res.end(mypages.top10jobsPage(pessoas,top10jobs))
             })
             .catch( erro => {
                 console.log("Erro: " + erro)

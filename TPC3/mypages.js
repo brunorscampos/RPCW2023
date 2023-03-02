@@ -156,7 +156,6 @@ exports.distribSexPage = function(pessoas,sexos){
 }
 
 exports.distribSportPage = function(pessoas,desportos){
-    let desportos_desc = desportos.sort((d1,d2) => pessoas.filter(p => p.desportos.includes(d1)).length < pessoas.filter(p => p.desportos.includes(d2)).length ? 1 : -1)
     var pagina_html = `
     <!DOCTYPE html>
     <html>
@@ -178,10 +177,10 @@ exports.distribSportPage = function(pessoas,desportos){
                         <ul class="w3-ul w3-hoverable" style="height:81vh;overflow:auto;">
         `
 
-        for(let i = 0;i<desportos_desc.length;i++){
-            let num = pessoas.filter(p => p.desportos.includes(desportos_desc[i])).length
+        for(let i = 0;i<desportos.length;i++){
+            let num = pessoas.filter(p => p.desportos.includes(desportos[i])).length
             pagina_html += `
-                            <li><a href="#${desportos_desc[i]}" class="w3-button">${desportos_desc[i]} (${num})</a></li>
+                            <li><a href="#${desportos[i]}" class="w3-button">${desportos[i]} (${num})</a></li>
             `
         }
 
@@ -192,8 +191,8 @@ exports.distribSportPage = function(pessoas,desportos){
                     <div class="w3-container">
                     `
             
-                for(let i = 0;i<desportos_desc.length;i++){
-                    let desporto = desportos_desc[i]
+                for(let i = 0;i<desportos.length;i++){
+                    let desporto = desportos[i]
                     let pessoas_desporto = pessoas.filter(p => p.desportos.includes(desporto)).sort((p1,p2) => p1.nome < p2.nome ? -1 : 1)
             
                     pagina_html += `
@@ -202,7 +201,7 @@ exports.distribSportPage = function(pessoas,desportos){
                                         <table class="w3-table-all w3-hoverable">
                                         <thead>
                                             <tr>
-                                                <th>ID</th><th>Nome</th><th>Idade</th><th>desporto</th><th>Cidade</th>
+                                                <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
                                             </tr>
                                         </thead>
                     `
@@ -234,7 +233,7 @@ exports.distribSportPage = function(pessoas,desportos){
     return pagina_html   
 }
 
-exports.top10jobsPage = function(lista){
+exports.top10jobsPage = function(pessoas,top10jobs){
     var pagina_html = `
     <!DOCTYPE html>
     <html>
@@ -248,27 +247,59 @@ exports.top10jobsPage = function(lista){
 
                 <header class="w3-container w3-blue">
                     <h1>Top10 Profissões</h1>
-                </header>
-        
-                <div class="w3-container">
-                    <table class="w3-table-all w3-hoverable">
-                    <thead>
-                        <tr>
-                            <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
-                        </tr>
-                    </thead>
-        `
+                    </header>
 
-    for(let i = 0;i<lista.length;i++){
-        pagina_html += `
-                        <tr class="clickable" onclick="window.location='${lista[i].id}'" style="cursor:pointer;">
-                            <td>${lista[i].id}</td><td>${lista[i].nome}</td><td>${lista[i].idade}</td><td>${lista[i].sexo}</td><td>${lista[i].morada.cidade}</td>
-                        </tr>
-        `
-    }
-
-    pagina_html += `
-                    </table>
+                    <div class="w3-row">
+                        <div class="w3-col m5 l4" style="position:sticky;top:11vh;">
+                            <h2 style="margin:5px;">Profissões</h2>
+                            <ul class="w3-ul w3-hoverable" style="height:81vh;overflow:auto;">
+            `
+    
+            for(let i = 0;i<top10jobs.length;i++){
+                let num = pessoas.filter(p => p.profissao == top10jobs[i]).length
+                pagina_html += `
+                                <li><a href="#${top10jobs[i]}" class="w3-button">${top10jobs[i]} (${num})</a></li>
+                `
+            }
+    
+            pagina_html += `
+                            </ul>
+                        </div>
+                        <div class="w3-col m7 l8">
+                        <div class="w3-container">
+                    `
+            
+                for(let i = 0;i<top10jobs.length;i++){
+                    let job = top10jobs[i]
+                    let pessoas_job = pessoas.filter(p => p.profissao == job).sort((p1,p2) => p1.nome < p2.nome ? -1 : 1)
+            
+                    pagina_html += `
+                                        <a name="${job}"/>
+                                        <h2>${job.charAt(0).toUpperCase() + job.slice(1)}</h2>
+                                        <table class="w3-table-all w3-hoverable">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
+                                            </tr>
+                                        </thead>
+                    `
+            
+                    for(let i = 0;i<pessoas_job.length;i++){
+                        pagina_html += `
+                                            <tr class="clickable" onclick="window.location='${pessoas_job[i].id}'" style="cursor:pointer;">
+                                                <td>${pessoas_job[i].id}</td><td>${pessoas_job[i].nome}</td><td>${pessoas_job[i].idade}</td><td>${pessoas_job[i].sexo}</td><td>${pessoas_job[i].morada.cidade}</td>
+                                            </tr>
+                        `
+                    }
+            
+                    pagina_html += `
+                                        </table>
+                    `
+                }
+            
+                pagina_html += `
+                        </div>
+                    </div>
                 </div>
                 <footer class="w3-container w3-blue">
                     <h5>Generated in RPCW2023</h5>
