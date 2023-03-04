@@ -13,7 +13,7 @@
     </meta>
     <resumo>
         <p>Website sobre sitios arqueologicos criado com recurso a <i>Python</i> e <i>Node.js</i>.</p>
-        <p>Dataset processado, tirando partido de <xref url="https://beautiful-soup-4.readthedocs.io">BeautifulSoup, para extração de cada entrada, e elementos de cada uma.</xref></p>
+        <p>Dataset processado, tirando partido de <xref url="https://beautiful-soup-4.readthedocs.io">BeautifulSoup</xref>, para extração de cada entrada, e elementos de cada uma.</p>
         <p>Como algumas entradas do dataset apresentam ausência de certos elementos, estes foram apresentados como <b>"MISSING"</b> na pagina HTML.</p>
     </resumo>
     <resultados><!-- lista -->
