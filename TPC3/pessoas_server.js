@@ -19,7 +19,6 @@ http.createServer(function(req,res){
         axios.get('http://localhost:3000/pessoas')
             .then(function(resp){
                 var pessoas = resp.data
-                console.log(typeof pessoas[0].morada)
                 res.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'})
                 res.end(mypages.pessoasPage(pessoas))
             })

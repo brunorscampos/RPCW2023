@@ -6,23 +6,24 @@ exports.indexPage = function(){
             <title>About People</title>
             <meta charset="utf-8"/>
             <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
             <div class="w3-card-4">
 
-                <header class="w3-container w3-blue">
+                <header class="w3-container w3-blue w3-center">
                     <h1>Index</h1>
                 </header>
         
                 <div class="w3-container">
-                    <ul class="w3-ul w3-hoverable">
-                        <li><a href="/pessoas" class="w3-button">Lista de Individuos</a></li>
-                        <li><a href="/distrib_sex" class="w3-button">Distribuição por Sexo</a></li>
-                        <li><a href="/distrib_sport" class="w3-button">Distribuição por Desporto</a></li>
-                        <li><a href="/top10jobs" class="w3-button">Top10 Profissões</a></li>
+                    <ul class="w3-ul w3-hoverable w3-center">
+                        <li class=clickable" onclick="window.location='/pessoas'" style="cursor:pointer;">Lista de Individuos</li>
+                        <li class=clickable" onclick="window.location='/distrib_sex'" style="cursor:pointer;">Distribuição por Sexo</li>
+                        <li class=clickable" onclick="window.location='/distrib_sport'" style="cursor:pointer;">Distribuição por Desporto</li>
+                        <li class=clickable" onclick="window.location='/top10jobs'" style="cursor:pointer;">Top10 Profissões</li>
                     </ul>
                 </div>
-                <footer class="w3-container w3-blue">
+                <footer class="w3-container w3-blue w3-center">
                     <h5>Generated in RPCW2023</h5>
                 </footer>
             </div>
@@ -40,20 +41,20 @@ exports.pessoasPage = function(lista){
             <title>Lista de Pessoas</title>
             <meta charset="utf-8"/>
             <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
             <div class="w3-card-4">
 
                 <header class="w3-container w3-blue">
-                    <h1>Lista de Pessoas</h1>
+                    <h1><i class="fa fa-home clickable" onclick="window.location='/'" style="cursor:pointer;"></i>  Lista de Pessoas</h1>
                 </header>
-        
                 <div class="w3-container">
                     <table class="w3-table-all w3-hoverable">
                         <thead>
-                        <tr >
-                            <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
-                        </tr>
+                            <tr >
+                                <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
+                            </tr>
                         </thead>
         `
 
@@ -68,7 +69,7 @@ exports.pessoasPage = function(lista){
     pagina_html += `
                     </table>
                 </div>
-                <footer class="w3-container w3-blue">
+                <footer class="w3-container w3-blue w3-center">
                     <h5>Generated in RPCW2023</h5>
                 </footer>
             </div>
@@ -86,13 +87,15 @@ exports.distribSexPage = function(pessoas,sexos){
             <title>Distribuição por Sexo</title>
             <meta charset="utf-8"/>
             <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
             <div class="w3-card-4">
 
                 <header class="w3-container w3-blue">
-                    <h1>Distribuição por Sexo</h1>
+                    <h1><i class="fa fa-home clickable" onclick="window.location='/'" style="cursor:pointer;"></i>  Distribuição por Sexo</h1>
                 </header>
+
                 <div class="w3-row">
                     <div class="w3-col m3 l2" style="position:sticky;top:0;">
                         <h2 style="margin:5px;">Sexos</h2>
@@ -102,7 +105,7 @@ exports.distribSexPage = function(pessoas,sexos){
         for(let i = 0;i<sexos.length;i++){
             let num = pessoas.filter(p => p.sexo == sexos[i]).length
             pagina_html += `
-                            <li><a href="#${sexos[i]}" class="w3-button">${sexos[i]} (${num})</a></li>
+                            <li class=clickable" onclick="window.location='#${sexos[i]}'" style="cursor:pointer;">${sexos[i]} (${num})</li>
             `
         }
 
@@ -121,11 +124,11 @@ exports.distribSexPage = function(pessoas,sexos){
                             <a name="${sexo}"/>
                             <h2>${sexo.charAt(0).toUpperCase() + sexo.slice(1)}</h2>
                             <table class="w3-table-all w3-hoverable">
-                            <thead>
-                                <tr>
-                                    <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
-                                </tr>
-                            </thead>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
+                                    </tr>
+                                </thead>
         `
 
         for(let i = 0;i<pessoas_sexo.length;i++){
@@ -145,7 +148,7 @@ exports.distribSexPage = function(pessoas,sexos){
                         </div>
                     </div>
                 </div>
-                <footer class="w3-container w3-blue">
+                <footer class="w3-container w3-blue w3-center">
                     <h5>Generated in RPCW2023</h5>
                 </footer>
             </div>
@@ -163,12 +166,13 @@ exports.distribSportPage = function(pessoas,desportos){
             <title>Distribuição por Desporto</title>
             <meta charset="utf-8"/>
             <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
             <div class="w3-card-4">
 
                 <header class="w3-container w3-blue">
-                    <h1>Distribuição por Desporto</h1>
+                    <h1><i class="fa fa-home clickable" onclick="window.location='/'" style="cursor:pointer;"></i>  Distribuição por Desporto</h1>
                 </header>
 
                 <div class="w3-row">
@@ -180,7 +184,7 @@ exports.distribSportPage = function(pessoas,desportos){
         for(let i = 0;i<desportos.length;i++){
             let num = pessoas.filter(p => p.desportos.includes(desportos[i])).length
             pagina_html += `
-                            <li><a href="#${desportos[i]}" class="w3-button">${desportos[i]} (${num})</a></li>
+                            <li class=clickable" onclick="window.location='#${desportos[i]}'" style="cursor:pointer;">${desportos[i]} (${num})</li>
             `
         }
 
@@ -188,7 +192,7 @@ exports.distribSportPage = function(pessoas,desportos){
                         </ul>
                     </div>
                     <div class="w3-col m8 l9">
-                    <div class="w3-container">
+                        <div class="w3-container">
                     `
             
                 for(let i = 0;i<desportos.length;i++){
@@ -196,26 +200,26 @@ exports.distribSportPage = function(pessoas,desportos){
                     let pessoas_desporto = pessoas.filter(p => p.desportos.includes(desporto)).sort((p1,p2) => p1.nome < p2.nome ? -1 : 1)
             
                     pagina_html += `
-                                        <a name="${desporto}"/>
-                                        <h2>${desporto.charAt(0).toUpperCase() + desporto.slice(1)}</h2>
-                                        <table class="w3-table-all w3-hoverable">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
-                                            </tr>
-                                        </thead>
+                            <a name="${desporto}"/>
+                            <h2>${desporto.charAt(0).toUpperCase() + desporto.slice(1)}</h2>
+                            <table class="w3-table-all w3-hoverable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
+                                    </tr>
+                                </thead>
                     `
             
                     for(let i = 0;i<pessoas_desporto.length;i++){
                         pagina_html += `
-                                            <tr class="clickable" onclick="window.location='${pessoas_desporto[i].id}'" style="cursor:pointer;">
-                                                <td>${pessoas_desporto[i].id}</td><td>${pessoas_desporto[i].nome}</td><td>${pessoas_desporto[i].idade}</td><td>${pessoas_desporto[i].sexo}</td><td>${pessoas_desporto[i].morada.cidade}</td>
-                                            </tr>
+                                <tr class="clickable" onclick="window.location='${pessoas_desporto[i].id}'" style="cursor:pointer;">
+                                    <td>${pessoas_desporto[i].id}</td><td>${pessoas_desporto[i].nome}</td><td>${pessoas_desporto[i].idade}</td><td>${pessoas_desporto[i].sexo}</td><td>${pessoas_desporto[i].morada.cidade}</td>
+                                </tr>
                         `
                     }
             
                     pagina_html += `
-                                        </table>
+                            </table>
                     `
                 }
             
@@ -223,7 +227,7 @@ exports.distribSportPage = function(pessoas,desportos){
                         </div>
                     </div>
                 </div>
-                <footer class="w3-container w3-blue">
+                <footer class="w3-container w3-blue w3-center">
                     <h5>Generated in RPCW2023</h5>
                 </footer>
             </div>
@@ -241,31 +245,32 @@ exports.top10jobsPage = function(pessoas,top10jobs){
             <title>Top10 Profissões</title>
             <meta charset="utf-8"/>
             <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
             <div class="w3-card-4">
 
                 <header class="w3-container w3-blue">
-                    <h1>Top10 Profissões</h1>
-                    </header>
+                    <h1><i class="fa fa-home clickable" onclick="window.location='/'" style="cursor:pointer;"></i>  Top10 Profissões</h1>
+                </header>
 
-                    <div class="w3-row">
-                        <div class="w3-col m5 l4" style="position:sticky;top:11vh;">
-                            <h2 style="margin:5px;">Profissões</h2>
-                            <ul class="w3-ul w3-hoverable" style="height:81vh;overflow:auto;">
+                <div class="w3-row">
+                    <div class="w3-col m4 l3" style="position:sticky;top:11vh;">
+                        <h2 style="margin:5px;">Profissões</h2>
+                        <ul class="w3-ul w3-hoverable" style="height:81vh;overflow:auto;">
             `
     
             for(let i = 0;i<top10jobs.length;i++){
                 let num = pessoas.filter(p => p.profissao == top10jobs[i]).length
                 pagina_html += `
-                                <li><a href="#${top10jobs[i]}" class="w3-button">${top10jobs[i]} (${num})</a></li>
+                            <li class=clickable" onclick="window.location='#${top10jobs[i]}'" style="cursor:pointer;">${top10jobs[i]} (${num})</li>
                 `
             }
     
             pagina_html += `
-                            </ul>
-                        </div>
-                        <div class="w3-col m7 l8">
+                        </ul>
+                    </div>
+                    <div class="w3-col m8 l9">
                         <div class="w3-container">
                     `
             
@@ -274,26 +279,26 @@ exports.top10jobsPage = function(pessoas,top10jobs){
                     let pessoas_job = pessoas.filter(p => p.profissao == job).sort((p1,p2) => p1.nome < p2.nome ? -1 : 1)
             
                     pagina_html += `
-                                        <a name="${job}"/>
-                                        <h2>${job.charAt(0).toUpperCase() + job.slice(1)}</h2>
-                                        <table class="w3-table-all w3-hoverable">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
-                                            </tr>
-                                        </thead>
+                            <a name="${job}"/>
+                            <h2>${job.charAt(0).toUpperCase() + job.slice(1)}</h2>
+                            <table class="w3-table-all w3-hoverable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
+                                    </tr>
+                                </thead>
                     `
             
                     for(let i = 0;i<pessoas_job.length;i++){
                         pagina_html += `
-                                            <tr class="clickable" onclick="window.location='${pessoas_job[i].id}'" style="cursor:pointer;">
-                                                <td>${pessoas_job[i].id}</td><td>${pessoas_job[i].nome}</td><td>${pessoas_job[i].idade}</td><td>${pessoas_job[i].sexo}</td><td>${pessoas_job[i].morada.cidade}</td>
-                                            </tr>
+                                <tr class="clickable" onclick="window.location='${pessoas_job[i].id}'" style="cursor:pointer;">
+                                    <td>${pessoas_job[i].id}</td><td>${pessoas_job[i].nome}</td><td>${pessoas_job[i].idade}</td><td>${pessoas_job[i].sexo}</td><td>${pessoas_job[i].morada.cidade}</td>
+                                </tr>
                         `
                     }
             
                     pagina_html += `
-                                        </table>
+                            </table>
                     `
                 }
             
@@ -301,7 +306,7 @@ exports.top10jobsPage = function(pessoas,top10jobs){
                         </div>
                     </div>
                 </div>
-                <footer class="w3-container w3-blue">
+                <footer class="w3-container w3-blue w3-center">
                     <h5>Generated in RPCW2023</h5>
                 </footer>
             </div>
@@ -319,12 +324,13 @@ exports.infoPage = function(pessoa){
             <title>Informações</title>
             <meta charset="utf-8"/>
             <link rel="stylesheet" href="w3.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
             <div class="w3-card-4">
 
                 <header class="w3-container w3-blue">
-                    <h1>Informações</h1>
+                    <h1><i class="fa fa-home clickable" onclick="window.location='/'" style="cursor:pointer;"></i>  Informações</h1>
                 </header>
         
                 <div class="w3-container">
@@ -334,41 +340,41 @@ exports.infoPage = function(pessoa){
     for(let i = 0;i<chaves.length;i++){
         if(Array.isArray(pessoa[chaves[i]])){
             pagina_html += `
-            <p><b>${chaves[i]}</b></p>
-            <ul>
+                    <p><b>${chaves[i]}</b></p>
+                    <ul>
             `
             for(let j = 0;j<pessoa[chaves[i]].length;j++){
                 pagina_html += `
-                    <li><p>${pessoa[chaves[i]][j]} </p></li>
+                        <li><p>${pessoa[chaves[i]][j]} </p></li>
                 `
             }
             pagina_html += `
-            </ul>
+                    </ul>
             `
         }else if (typeof pessoa[chaves[i]] == 'object'){
             let at_keys = Object.keys(pessoa[chaves[i]])
             pagina_html += `
-            <p><b>${chaves[i]}</b></p>
-            <ul>
+                    <p><b>${chaves[i]}</b></p>
+                    <ul>
             `
             for(let j = 0;j<at_keys.length;j++){
                 pagina_html += `
-                    <li><p><b>${at_keys[j]}: </b> ${pessoa[chaves[i]][at_keys[j]]} </p></li>
+                        <li><p><b>${at_keys[j]}: </b> ${pessoa[chaves[i]][at_keys[j]]} </p></li>
                 `
             }
             pagina_html += `
-            </ul>
+                    </ul>
             `
         }else{
             pagina_html += `
-            <p><b>${chaves[i]}: </b> ${pessoa[chaves[i]]} </p>
+                    <p><b>${chaves[i]}: </b> ${pessoa[chaves[i]]} </p>
             `
         }
     }
 
     pagina_html += `
                 </div>
-                <footer class="w3-container w3-blue">
+                <footer class="w3-container w3-blue w3-center">
                     <h5>Generated in RPCW2023</h5>
                 </footer>
             </div>
