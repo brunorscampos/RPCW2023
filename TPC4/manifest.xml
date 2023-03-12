@@ -2,8 +2,8 @@
 <manifesto>
     <meta>
         <titulo>TPC4</titulo>
-        <subtitulo>Este é opcional</subtitulo>
-        <data>AAAA-MM-DD</data>
+        <subtitulo>ToDo List SPA</subtitulo>
+        <data>2023-03-12</data>
         <autor>
             <nome>Bruno Ricardo Silva Campos</nome>
             <id>PG50275</id>
@@ -12,11 +12,14 @@
         <uc>MEI</uc>
     </meta>
     <resumo>
-        <p>Para 1...<b>isto fica a bold</b></p>
-        <p>Para 2...<i>isto fica a italico</i></p>
-        <p>Para 3 com <xref url="URL para o recurso">uma referencia externa</xref>...</p>
+        <p>Website SPA para ToDo List criado com recurso a <i>Node.js</i> e <xref url="https://www.w3schools.com/w3css/defaulT.asp"></xref><i>W3.CSS</i>.</p>
+        <p>Servidor JS que usa API criada com <i>json-server --watch datasets/&lt;tasks.json&gt;</i>, como demonstrado durante a aula.</p>
     </resumo>
     <resultados><!-- lista -->
-        <resultado path="link para o ficheiro(link relativo)">Descrição do que é</resultado>
+        <resultado path="toDolists_server.js">Script principal que executa o servidor e trata pedidos.</resultado>
+        <resultado path="templates.js">Script auxiliar para fornecer a pagina HTML do website.</resultado>
+        <resultado path="static.js">Script auxiliar para tratar dos recursos estáticos.</resultado>
+        <resultado path="tasks.json">Base de Dados para criar a API json-server para o website.</resultado>
+        <resultado path="public">Pasta com os recursos estaticos publicos do website.</resultado>
     </resultados>
 </manifesto>
