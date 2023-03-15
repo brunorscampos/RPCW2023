@@ -1,0 +1,108 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Todo List
+    .w3-container
+      form.w3-container(method="POST")
+        input(type="hidden" name="_method" value="ADD")
+        fieldset
+          legend Task:
+          .w3-row-padding
+            .w3-third
+              label DateDued
+              input.w3-input.w3-round(type="date" name="dateDued")
+            .w3-third
+              label Who
+              input.w3-input.w3-round(type="text" name="who")
+            .w3-third
+              button.w3-btn.w3-yellow.w3-border.w3-border-black(type="submit") Add
+          label What
+          input.w3-input.w3-round(type="text" name="what")
+        br
+    .w3-row
+      .w3-col.s6(style="height:53vh;overflow:auto;")
+        .w3-bar(id="toDo_edit" style="display:none;")
+          form.w3-container.w3-bar-item(method="POST" style="padding:0px")
+            input(type="hidden" name="_method" value="PUT")
+            input(type="hidden" name="db" value="toDo")
+            input(type="hidden" name="id" value="-1" id="toDo_edit_id")
+            .w3-row-padding
+              .w3-third
+                label DateDued
+                input.w3-input.w3-round(type="date" name="dateDued")
+              .w3-third
+                label Who
+                input.w3-input.w3-round(type="text" name="who")
+              .w3-third
+                button.w3-btn.w3-yellow.w3-small.w3-padding-small.w3-border.w3-border-black(type="submit") Update
+            .w3-row-padding(style="padding-bottom:3px;")
+              label What
+              input.w3-input.w3-round(type="text" name="what")
+        table.w3-table-all
+          tr
+            th DateDued
+            th Who
+            th What
+            th Actions
+          each td in toDo
+            tr
+                td #{td.dateDued}
+                td #{td.who}
+                td(style="width:50%;") #{td.what}
+                td
+                  .w3-bar
+                    button.w3-btn.w3-yellow.w3-tiny.w3-padding-small.w3-bar-item.w3-border.w3-border-black(onclick="showHide('toDo'," + td.id +")") Edit
+                    form.w3-container.w3-bar-item(method="POST" style="padding:0px")
+                      input(type="hidden" name="_method" value="DELETE")
+                      input(type="hidden" name="db" value="toDo")
+                      input(type="hidden" name="id" value=td.id)
+                      button.w3-btn.w3-yellow.w3-tiny.w3-padding-small.w3-border.w3-border-black(type="submit") Delete
+                    form.w3-container.w3-bar-item(method="POST" style="padding:0px")
+                      input(type="hidden" name="_method" value="CHECK")
+                      input(type="hidden" name="db" value="toDo")
+                      input(type="hidden" name="id" value=td.id)
+                      input(type="hidden" name="dateDued" value=td.dateDued)
+                      input(type="hidden" name="who" value=td.who)
+                      input(type="hidden" name="what" value=td.what)
+                      button.w3-btn.w3-yellow.w3-tiny.w3-padding-small.w3-border.w3-border-black(type="submit") Check
+      .w3-col.s6(style="height:53vh;overflow:auto;")
+        .w3-bar(id="completed_edit" style="display:none;")
+          form.w3-container.w3-bar-item(method="POST" style="padding:0px")
+            input(type="hidden" name="_method" value="PUT")
+            input(type="hidden" name="db" value="completed")
+            input(type="hidden" name="id" value="-1" id="completed_edit_id")
+            .w3-row-padding
+              .w3-third
+                label DateDued
+                input.w3-input.w3-round(type="date" name="dateDued")
+              .w3-third
+                label Who
+                input.w3-input.w3-round(type="text" name="who")
+              .w3-third
+                button.w3-btn.w3-yellow.w3-small.w3-padding-small.w3-border.w3-border-black(type="submit") Update
+            .w3-row-padding(style="padding-bottom:3px;")
+              label What
+              input.w3-input.w3-round(type="text" name="what")
+        table.w3-table-all
+          tr
+            th DateDued
+            th Who
+            th What
+            th Actions
+          each c in completed
+            tr
+              td #{c.dateDued}
+              td #{c.who}
+              td(style="width:50%;") #{c.what}
+              td
+                .w3-bar
+                  button.w3-btn.w3-yellow.w3-tiny.w3-padding-small.w3-bar-item.w3-border.w3-border-black(onclick="showHide('completed'," + c.id + ")") Edit
+                  form.w3-container.w3-bar-item(method="POST" style="padding:0px")
+                    input(type="hidden" name="_method" value="DELETE")
+                    input(type="hidden" name="db" value="completed")
+                    input(type="hidden" name="id" value=c.id)
+                    button.w3-btn.w3-yellow.w3-tiny.w3-padding-small.w3-border.w3-border-black(type="submit") Delete
+    footer.w3-container.w3-blue.w3-center.w3-bottom
+      h5 Generated by RPCW2023 in #{d}
