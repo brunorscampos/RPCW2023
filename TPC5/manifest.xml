@@ -2,8 +2,8 @@
 <manifesto>
     <meta>
         <titulo>TPC5</titulo>
-        <subtitulo>Este é opcional</subtitulo>
-        <data>AAAA-MM-DD</data>
+        <subtitulo>ToDo List SPA com Express</subtitulo>
+        <data>2023-03-17</data>
         <autor>
             <nome>Bruno Ricardo Silva Campos</nome>
             <id>PG50275</id>
@@ -12,11 +12,13 @@
         <uc>MEI</uc>
     </meta>
     <resumo>
-        <p>Para 1...<b>isto fica a bold</b></p>
-        <p>Para 2...<i>isto fica a italico</i></p>
-        <p>Para 3 com <xref url="URL para o recurso">uma referencia externa</xref>...</p>
+        <p>Website SPA para ToDo List igual ao do TP4 recriado com recurso a <i>Express</i>.</p>
+        <p>Servidor JS que usa API criada com <i>json-server --watch datasets/&lt;tasks.json&gt;</i>.</p>
     </resumo>
     <resultados><!-- lista -->
-        <resultado path="link para o ficheiro(link relativo)">Descrição do que é</resultado>
+        <resultado path="routes/index.js">Script JS que responde a todos os pedidos.</resultado>
+        <resultado path="views/index.pug">Pagina HTML do TPC4 adaptada para PUG.</resultado>
+        <resultado path="public/javascripts/showHide.js">Script com função usada em "index.pug".</resultado>
+        <resultado path="controllers/tasks.js">Controller entre o Servidor JS e a API json-server.</resultado>
     </resultados>
 </manifesto>
