@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    header.w3-container.w3-blue
+      h1
+        i.fa.fa-home.clickable(onclick="window.location='/'" style='cursor:pointer;') 
+        | Top10 Profissões
+    .w3-row
+      .w3-col.m4.l3(style='position:sticky;top:11vh;')
+        h2(style='margin:5px;') Profissões
+        ul.w3-ul.w3-hoverable(style='height:81vh;overflow:auto;')
+          each job in top10jobs
+            - let num = pessoas.filter(p => p.profissao == job).length
+            li.clickable(onclick="window.location='#" + job + "'" style='cursor:pointer;') #{job} (#{num})
+      .w3-col.m8.l9
+        .w3-container
+          each job in top10jobs
+            - let pessoas_job = pessoas.filter(p => p.profissao == job).sort((p1,p2) => p1.nome < p2.nome ? -1 : 1)
+            a(name=job)
+            h2 #{job.charAt(0).toUpperCase() + job.slice(1)}
+            table.w3-table-all.w3-hoverable
+              thead
+                tr
+                  th ID
+                  th Nome
+                  th Idade
+                  th Sexo
+                  th Cidade
+              each p in pessoas_job
+                tr.clickable(onclick="window.location='/pessoas/" + p.id + "'" style='cursor:pointer;')
+                  td #{p.id}
+                  td #{p.nome}
+                  td #{p.idade}
+                  td #{p.sexo}
+                  td #{p.morada.cidade}
+    footer.w3-container.w3-blue.w3-center
+      h5 Generated in RPCW2023 in #{d}

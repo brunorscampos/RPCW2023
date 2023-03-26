@@ -97,6 +97,6 @@ http.createServer(function(req,res){
                 res.end('Erro: ' + erro)
             })
     }
-}).listen(7777)
+}).listen(9999)
 
-console.log("Servidor à escuta na porta 7777...")
+console.log("Servidor à escuta na porta 9999...")

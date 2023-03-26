@@ -1,0 +1,89 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-blue
+      h1
+        i.fa.fa-home.clickable(onclick="window.location='/'" style='cursor:pointer;') 
+        | Informações
+    .w3-container
+      - let chaves = Object.keys(pessoa)
+      each key in chaves
+        if Array.isArray(pessoa[key])
+          p
+            b #{key}
+          ul
+            each val in pessoa[key]
+              li
+                p #{val} 
+        else if typeof pessoa[key] == 'object'
+          - let at_keys = Object.keys(pessoa[key])
+          if key == 'morada'
+            p
+              b Morada
+            ul
+              li
+                p
+                  b Cidade:  
+                  | #{pessoa[key]["cidade"]}
+              li
+                p
+                  b Distrito:  
+                  | #{pessoa[key]["distrito"]}
+          else if key == 'partido_politico'
+            p
+              b Partido Político
+            ul
+              li
+                p
+                  b Abreviatura:  
+                  | #{pessoa[key]["party_abbr"]}
+              li
+                p
+                  b Nome:  
+                  | #{pessoa[key]["party_name"]}
+          else if key == 'atributos'
+            p
+              b Atributos
+            ul
+              if pessoa[key]["fumador"]
+                li 
+                  p Fumador
+              if pessoa[key]["gosta_cinema"]
+                li
+                  p Gosta cinema
+              if pessoa[key]["gosta_viajar"]
+                li
+                  p Gosta viajar
+              if pessoa[key]["acorda_cedo"]
+                li
+                  p Acorda cedo
+              if pessoa[key]["gosta_ler"]
+                li
+                  p Gosta ler
+              if pessoa[key]["gosta_musica"]
+                li
+                  p Gosta Musica
+              if pessoa[key]["gosta_comer"]
+                li
+                  p Gosta Comer
+              if pessoa[key]["gosta_animais_estimacao"]
+                li
+                  p Gosta animais estimação
+              if pessoa[key]["gosta_dancar"]
+                li
+                  p Gosta dançar
+              li
+                p
+                  b Comida Favorita:  
+                  | #{pessoa[key]["comida_favorita"]}
+          else if !["_id","id"].includes(key)
+            p
+              b #{key}
+              | #{pessoa[key]}
+        else if !["_id","id"].includes(key)
+          p
+            b #{key}:
+            |  #{pessoa[key]}
+    footer.w3-container.w3-blue.w3-center
+      h5 Generated in RPCW2023 in #{d}

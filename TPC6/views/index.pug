@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-blue.w3-center
+      h1 Index
+    .w3-container
+      ul.w3-ul.w3-hoverable.w3-center
+        li.clickable(onclick="window.location='/pessoas'" style="cursor:pointer;") Lista de Individuos
+        li.clickable(onclick="window.location='/distrib_sex'" style="cursor:pointer;") Distribuição por Sexo
+        li.clickable(onclick="window.location='/distrib_sport'" style="cursor:pointer;") Distribuição por Desporto
+        li.clickable(onclick="window.location='/top10jobs'" style="cursor:pointer;") Top10 Profissões
+    footer.w3-container.w3-blue.w3-center
+      h5 Generated in RPCW2023 in #{d}
